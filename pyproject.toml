@@ -1,0 +1,77 @@
+[build-system]
+requires = ["poetry-core>=1.2.2"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "django-organization"
+version = "0.0.0"
+description = "The package `django-organization` has some utilities for organizing users as members of some organizations."
+license = "BSD-3-Clause"
+authors = ["LaunchAt, Inc. <hello@launchat.jp>"]
+maintainers = ["LaunchAt, Inc. <hello@launchat.jp>"]
+readme = "README.md"
+homepage = "https://github.com/LaunchAt/django-organization/"
+repository = "https://github.com/LaunchAt/django-organization/"
+documentation = "https://launchat.github.io/django-organization/"
+keywords = []
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Environment :: Web Environment",
+    "Framework :: Django",
+    "Framework :: Django :: 3.2",
+    "Framework :: Django :: 4.0",
+    "Framework :: Django :: 4.1",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+packages = [{ include = "organization" }]
+include = []
+exclude = []
+
+[tool.poetry.dependencies]
+python = ">=3.8.1"
+django = ">=3.2"
+
+[tool.poetry.group.dev.dependencies]
+mkdocs = "^1.4.2"
+mkdocs-material = "^8.5.11"
+flake8 = "^6.0.0"
+isort = "^5.10.1"
+black = "^22.10.0"
+mypy = "^0.991"
+pytest = "^7.2.0"
+tox = "^3.27.1"
+
+[tool.black]
+target-version = ["py38", "py39", "py310", "py311"]
+skip-string-normalization = true
+extend-exclude = "^.*/migrations/*$"
+
+[tool.isort]
+extend_skip = [".tox"]
+extend_skip_glob = ["*/migrations/*"]
+skip_gitignore = true
+profile = "black"
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+ensure_newline_before_comments = true
+line_length = 88
+
+[tool.mypy]
+ignore_missing_imports = true
+check_untyped_defs = true
+exclude = ["^.*/migrations/*$"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

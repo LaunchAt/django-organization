@@ -1,0 +1,53 @@
+# MkDocs Configuration
+# https://www.mkdocs.org/user-guide/configuration/
+
+# Project Information
+site_name: Django Organization
+site_url: https://launchat.github.io/django-organization/
+repo_url: https://github.com/LaunchAt/django-organization/
+repo_name: django-organization
+edit_uri: edit/master/docs/
+edit_uri_template: null
+site_description: The package `django-organization` has some utilities for organizing users as members of some organizations.
+site_author: LaunchAt, Inc.
+copyright: null
+remote_branch: gh-pages
+remote_name: origin
+
+# Documentation Layout
+nav:
+  - Home: 'index.md'
+  - Community:
+    - 'release-notes.md'
+
+# Build Directories
+theme:
+  name: material
+  locale: en
+  custom_dir: ''
+  static_templates: []
+docs_dir: docs
+site_dir: site
+extra_css: []
+extra_javascript: []
+extra_templates: []
+extra: {}
+
+# Preview Controls
+
+# Live Reloading
+watch: []
+use_directory_urls: true
+strict: false
+dev_addr: 127.0.0.1:8080
+
+# Formatting Options
+markdown_extensions: []
+hooks: []
+plugins:
+  - search:
+      separator: '[\s\-]+'
+      min_search_length: 3
+      lang: []
+      prebuild_index: true
+      indexing: 'full'

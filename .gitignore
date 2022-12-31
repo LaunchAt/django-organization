@@ -1,0 +1,17 @@
+# .gitignore
+
+# general
+.*
+*~
+*.egg-info
+*.log
+*.mo
+*.pyc
+__pycache__/
+!.editorconfig
+!.github
+!.gitignore
+!.flake8
+
+# mkdocs
+/site

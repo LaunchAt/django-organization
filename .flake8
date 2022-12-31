@@ -1,0 +1,6 @@
+[flake8]
+exclude =
+    .tox
+    .venv
+    */migrations/*
+max-line-length = 88
