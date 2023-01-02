@@ -40,7 +40,7 @@ exclude = []
 [tool.poetry.dependencies]
 python = ">=3.8.1"
 django = ">=3.2"
-django-model-utils = {git = "https://github.com/LaunchAt/django-model-utils.git"}
+django-model-utils = {git = "https://github.com/LaunchAt/django-model-utils.git", rev = "master"}
 jsonschema = "^4.17.3"
 
 [tool.poetry.group.dev.dependencies]

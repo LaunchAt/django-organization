@@ -203,7 +203,7 @@ django = ">=3.2"
 [package.source]
 type = "git"
 url = "https://github.com/LaunchAt/django-model-utils.git"
-reference = "HEAD"
+reference = "master"
 resolved_reference = "21bbce73d7fd21ad4728958aa19205497fde4c40"
 
 [[package]]
@@ -1091,4 +1091,4 @@ testing = ["flake8 (<5)", "func-timeout", "jaraco.functools", "jaraco.itertools"
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.8.1"
-content-hash = "7695bd4e293dd08966e4cb98bbce86fe6c39692b4addc7c9e944ac962ae7b5b7"
+content-hash = "aff51802113127c3a0c90673e4d6a6c7b8431fa2416fa5be5d43605906c45172"
