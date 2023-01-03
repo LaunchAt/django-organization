@@ -3,7 +3,7 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 from model_utils.base.models import BaseModel
 
-USER_MODEL = settings.AUTH_USER_MODEL
+USER_MODEL = getattr(settings, 'ORGANIZATION_USER_MODEL', settings.AUTH_USER_MODEL)
 
 
 class PermissionLevel(models.IntegerChoices):
